@@ -35,8 +35,11 @@ class UI
 
 	deleteProduct(element)
 	{
+		// Si el elemento seleccionado tiene ese name
 		if(element.name === 'delete')
 		{
+			// Obtener el padre del elemento a eliminar
+			// porque se encuentra dentro de un contenedor
 			element.parentElement.parentElement.parentElement.remove();
 			this.showMessage("Product deleted successfully","danger");
 		}
